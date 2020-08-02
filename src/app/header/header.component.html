@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row >
+      <h1 routerLink="/" style="margin-right:auto;cursor: pointer;">CHA-TTY
+        <mat-icon style="margin-left: 10px;">
+        chat
+        </mat-icon>
+      </h1>
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/login'"> 	<mat-icon style="margin-right: 5px;">https</mat-icon>Login </a>
+        <a mat-button [routerLink]="'/signup'"> <mat-icon style="margin-right: 5px;">supervisor_account</mat-icon>Signup</a>
+        <a mat-button [routerLink]="'/'" (click)="logout()"> <mat-icon style="margin-right: 5px;">settings_power</mat-icon>Logout</a>
+      </div>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row class="d-flex justify-content-center">
+        <p style="font-size: 20px;text-align: center;">Welcome to the chatrooom!!</p>
+    </mat-toolbar-row>
+  </mat-toolbar>

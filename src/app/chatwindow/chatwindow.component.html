@@ -1,0 +1,72 @@
+<div class="container" style="margin-top: 30px;">
+    <mat-card >
+        <div class="row"> 
+            <div class="col-lg-3 col-md-3 col-xs-6 col-sm-12" style="padding: 0%;margin-top: 10px;">
+                <mat-card style="background-color: #3f51b5;overflow: auto;max-height: 500px;">
+                    <div class="d-flex justify-content-center">
+                        <mat-icon style="color: white;">assignment_ind</mat-icon>
+                    </div>
+                    <h3 style="text-align: center;color: white;">
+                        All Users
+                    </h3>
+                    <mat-list role="list">
+                        <hr>
+                        <div *ngFor="let item of allusers">
+                            <ng-template [ngIf]="item.username!=username">
+                                <mat-list-item class="litem" (click)="changeuser(item.username)" role="listitem" >
+                                    <mat-icon style="margin-right: 5px;">account_circle</mat-icon>
+                                    {{item.username}}
+                                </mat-list-item>
+                                <hr>
+                            </ng-template>
+                        </div>
+                    </mat-list>
+                </mat-card>
+            </div>
+            <div class="col" style="margin-top: 10px;">
+              <ng-template [ngIf]="untouched">
+                <div id=mariochat>
+                  <h2>Select the user to start chat!
+                    <br> 
+                  <small><i style="color: white;" *ngIf="isTyping" class="isTyping">typing...</i></small>
+                  </h2>
+                  <div class="demo" id="chat-window" style="border-color: black;border: 3px;"></div>
+                  <button id="send">Send</button>    
+                </div>
+              </ng-template>
+              <ng-template [ngIf]="!untouched">
+                <div id="mario-chat">
+                    <h2>{{ user1 }}
+                      <br> 
+                    <small><i style="color: white;" *ngIf="isTyping" class="isTyping">typing...</i></small>
+                    </h2>
+                    <div class="demo" id="chat-window">
+                      <div *ngFor="let item of messageArray" id="aaa">
+                        <ng-template [ngIf]="item.user==username" [ngIfElse]="notShow">
+                          <div class="userMessage">
+                            <p>
+                              {{item.message}}
+                            </p>
+                            <small id="ti">{{item.timestamp | date:'h:mm'}}</small>
+                          </div>
+                        </ng-template>
+                        
+                        <ng-template #notShow>
+                          <div class="secUserMessage">
+                            <p>
+                              {{item.message}}
+                            </p>
+                            <small id="ti">{{item.timestamp | date:'h:mm'}}</small>
+                          </div>
+                        </ng-template>
+                      </div>
+                    </div>
+                  <input (keypress)="typing()"  [(ngModel)]="message" name="message" type="text" placeholder="Message" required/>            
+                  <button id="send" (click)="sendMessage();">Send</button>    
+                </div>
+              </ng-template>
+    
+            </div>
+        </div> 
+    </mat-card>
+</div>
