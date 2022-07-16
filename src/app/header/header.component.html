@@ -1,42 +1,34 @@
-<mat-toolbar color="primary" style="width:100% !important">
+<mat-toolbar color="primary" style="width:100% !important" class="header">
   <mat-toolbar-row style="height: fit-content !important; padding-top: 10px !important;padding-bottom:10px;">
-    <h1 routerLink="/" style="margin-right:auto;cursor: pointer;">CHA-TTY
-      <mat-icon style="margin-left: 10px;">
+    <div class="d-flex align-items-center mr-auto" style="cursor: pointer" routerLink="/">
+      <mat-icon style="margin-right: 10px;">
         chat
       </mat-icon>
-    </h1>
+      <h1>
+        CHAT-IT
+      </h1>
+    </div>
     <span class="menu-spacer"></span>
-    <div class="row">
       <ng-template [ngIf]="! data.isloggedin()">
-        <div class="col-11 col-sm-4 d-flex justify-content-end">
           <a mat-button [routerLink]="'/login'">
             <mat-icon style="margin-right: 5px;">https</mat-icon>Login
           </a>
-        </div>
       </ng-template>
       <ng-template [ngIf]="! data.isloggedin()">
-        <div class="col-11 col-sm-4 d-flex justify-content-end">
           <a mat-button [routerLink]="'/signup'">
             <mat-icon style="margin-right: 5px;">supervisor_account</mat-icon>Signup
           </a>
-        </div>
       </ng-template>
       <ng-template [ngIf]="data.isloggedin()">
-        <div class="col-11 col-sm-3 d-flex justify-content-end">
           <a mat-button [routerLink]="'/chat'">
             <mat-icon style="margin-right: 5px;">chat</mat-icon>Chat
           </a>
-        </div>
       </ng-template>
       <ng-template [ngIf]="data.isloggedin()">
-        <div class="col-11 col-sm-3 d-flex justify-content-end">
           <a mat-button [routerLink]="'/'" (click)="logout()">
             <mat-icon style="margin-right: 5px;">settings_power</mat-icon>Logout
           </a>
-        </div>
       </ng-template>
-
-    </div>
   </mat-toolbar-row>
 
   <!-- <mat-toolbar-row class="d-flex justify-content-center">

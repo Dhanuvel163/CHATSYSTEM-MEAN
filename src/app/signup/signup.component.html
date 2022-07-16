@@ -1,24 +1,21 @@
 <div>
-
     <ng-template [ngIf]="loading">
         <div class="d-flex justify-content-center" style="margin-top: 200px;">
             <mat-spinner color="accent"></mat-spinner>
         </div>
     </ng-template>
-
     <ng-template [ngIf]="! loading">
-        <div style="text-align: center;font-weight: bold;font-size:22px;margin-top: 60px;"
-            class="d-flex justify-content-center">
-            <div class="row text-white">
+        <div style="font-size:22px;margin-top: 40px;"
+            class="d-flex justify-content-center  font-weight-bold text-center">
+            <div class="d-flex align-items-center text-white">
                 <mat-icon style="margin-right: 5px;">supervisor_account</mat-icon>
-                <p>
+                <p class="mb-0 ml-1">
                     Signup !
                 </p>
             </div>
         </div>
-
         <div class="d-flex justify-content-center">
-            <mat-card style="background-color: bisque;margin-top:30px;">
+            <mat-card style="margin-top:30px;">
                 <form [formGroup]="registerForm">
                     <mat-form-field appearance="outline" class="w-100 mt-2">
                         <mat-label>Full Name</mat-label>
@@ -71,7 +68,4 @@
             </mat-card>
         </div>
     </ng-template>
-
-
-    <div style="height: 250px;"></div>
 </div>

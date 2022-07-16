@@ -1,20 +1,27 @@
 .footer {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background: linear-gradient(
-    112.5deg,
-    rgb(95, 10, 135) 11.4%,
-    rgb(164, 80, 139) 60.2%
-  ) !important;
-  position: fixed;
-  bottom: 0;
+  // border-top-left-radius: 15px;
+  // border-top-right-radius: 15px;
+  // background: linear-gradient(
+  //   112.5deg,
+  //   rgb(95, 10, 135) 11.4%,
+  //   rgb(164, 80, 139) 60.2%
+  // ) !important;
   width: 100%;
   z-index: 100;
   padding: 10px;
-  box-shadow: 0px 3px 5px #000, 0px -3px 5px #000;
+  h3 {
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    margin-bottom: 4px;
+  }
+  border-top: 1px solid white;
 }
-h3 {
-  text-align: center;
-  color: white;
-  margin-bottom: 4px;
+.scrollR{
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  overflow-x: hidden;
 }

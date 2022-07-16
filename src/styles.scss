@@ -16,11 +16,32 @@ body {
     rgb(2, 27, 121)
   ) !important;
   border: 0px;
-  -webkit-box-shadow: 0 10px 6px -6px #000;
-  -moz-box-shadow: 0 10px 6px -6px #000;
-  box-shadow: 0 10px 6px -6px #000;
+  font-weight: 500;
+  // box-shadow: 0 10px 6px -6px #000;
 }
 
 .snack {
   background: #d72323;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "OpenSans";
+  src: local("OpenSans"), url(./assets/Open_Sans/static/OpenSans/OpenSans-ExtraBold.ttf) format("truetype");
+}
+
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: Poppins,
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+.Hglass {
+  backdrop-filter: saturate(180%) blur(5px);
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }

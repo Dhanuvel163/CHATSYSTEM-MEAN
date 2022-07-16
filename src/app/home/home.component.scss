@@ -13,20 +13,12 @@
     rgb(198, 66, 110)
   ) !important;
   color: white;
-  -moz-box-shadow: inset 0 0 10px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0px 1px 6px 0px #000000;
   animation: scale 1s;
 }
 
-.display-4 {
-  font-family: cursive;
-  // color: #e8ffe8;
-}
 .lead {
   font-weight: bold;
-  // color: #e8ffe8;
-  font-family: cursive;
 }
 
 .col-12:nth-child(even) {
