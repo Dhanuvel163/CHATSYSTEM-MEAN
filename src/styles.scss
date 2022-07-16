@@ -24,20 +24,6 @@ body {
   background: #d72323;
 }
 
-@font-face {
-  font-display: swap;
-  font-family: "OpenSans";
-  src: local("OpenSans"), url(./assets/Open_Sans/static/OpenSans/OpenSans-ExtraBold.ttf) format("truetype");
-}
-
-@import '~@angular/material/theming';
-
-$custom-typography: mat-typography-config(
-  $font-family: Poppins,
-  $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500)
-);
-
 .Hglass {
   backdrop-filter: saturate(180%) blur(5px);
   -webkit-backdrop-filter: saturate(180%) blur(5px);
