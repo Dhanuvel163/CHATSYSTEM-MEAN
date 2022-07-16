@@ -1,11 +1,108 @@
 <div class="container" style="margin-top: 50px;">
-    <div class="jumbotron">
-        <h1 class="display-4">Hello there !!</h1>
-        <p class="lead">Here you can chat with your friends and strangers !</p>
-        <hr class="my-4">
-        <p>Signup to Get started</p>
-        <p class="lead">
-          <a class="btn btn-primary" routerLink="/signup" role="button">GetStarted !</a>
-        </p>
+  <div class="jumbotron">
+    <!-- <h1 class="display-4">Hello there !!</h1> -->
+    <p class="lead" style="line-height: normal;">
+      <b>
+        What are you waiting for start chatting with your friends !
+      </b>
+    </p>
+    <hr class="my-4" style="background-color: white;">
+    <p class="lead">
+      <a class="btn btn-primary" routerLink="/signup" role="button">GetStarted !</a>
+    </p>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12 col-md-6 mt-5">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <mat-icon style="margin-right: 5px;">supervisor_account</mat-icon>
+          </div>
+          <mat-card-title>Create your account</mat-card-title>
+        </mat-card-header>
+        <picture>
+          <source media='(min-width:0px)' srcset="../../assets/1.svg">
+          <img mat-card-image src="">
+        </picture>
+        <mat-card-content>
+          <p>
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [routerLink]="'/signup'">SIGNUP</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
+    <div class="col-12 col-md-6 mt-5">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <mat-icon style="margin-right: 5px;">find_in_page</mat-icon>
+          </div>
+          <mat-card-title>Search friends</mat-card-title>
+        </mat-card-header>
+        <picture>
+          <source media='(min-width:0px)' srcset="../../assets/4.svg">
+          <img mat-card-image src="">
+        </picture>
+        <mat-card-content>
+          <h3>
+            All registered members will be listed there you can search for your friends
+          </h3>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [routerLink]="'/chat'">CHAT</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-12 col-md-6 mt-5">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <mat-icon style="margin-right: 5px;">feedback</mat-icon>
+          </div>
+          <mat-card-title>Start Chatting</mat-card-title>
+        </mat-card-header>
+        <picture>
+          <source media='(min-width:0px)' srcset="../../assets/2.svg">
+          <img mat-card-image src="">
+        </picture>
+        <mat-card-content>
+          <p>
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [routerLink]="'/chat'">CHAT</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-12 col-md-6 mt-5">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <mat-icon>verified_user</mat-icon>
+          </div>
+          <mat-card-title>Realtime experience</mat-card-title>
+
+        </mat-card-header>
+        <picture>
+          <source media='(min-width:0px)' srcset="../../assets/5.svg">
+          <img mat-card-image src="">
+        </picture>
+        <mat-card-content>
+          <p>
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [routerLink]="'/login'">LOGIN</button>
+        </mat-card-actions>
+      </mat-card>
+      <div class="col">
+        <div style="height: 250px;"></div>
+      </div>
+    </div>
+
+  </div>
 </div>

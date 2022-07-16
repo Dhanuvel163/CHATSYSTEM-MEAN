@@ -1,0 +1,42 @@
+.mat-button-base {
+  background: linear-gradient(
+    to right,
+    rgb(5, 117, 230),
+    rgb(2, 27, 121)
+  ) !important;
+}
+.mat-card {
+  background: linear-gradient(
+    to right,
+    rgb(249, 83, 198),
+    rgb(185, 29, 115)
+  ) !important;
+  color: white;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  transition: 2s;
+  animation: scale 1s;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.mat-card:hover {
+  transition: 0.5s;
+  transform: translateX(-8px) translateY(-8px);
+}

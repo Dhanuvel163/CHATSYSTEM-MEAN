@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {UserService} from '../user.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-signin',
@@ -13,6 +14,7 @@ export class SigninComponent implements OnInit {
   registerForm: FormGroup;
   @ViewChild('pass')passel:ElementRef;
   passview=false;
+  loading=false;
   constructor(public formBuilder: FormBuilder,
     public snackBar: MatSnackBar,
     private user:UserService,
@@ -36,7 +38,9 @@ export class SigninComponent implements OnInit {
   }
   async onRegisterFormSubmit(value) {
     if (this.registerForm.valid) {
-      var signup=await this.user.post('http://localhost:3000/chat/login',value);
+      this.loading=true
+      var signup=await this.user.post(environment.DATABASE+'chat/login',value);
+      this.loading=false
       if(signup['success'])
       {
         localStorage.setItem('token',signup['token']);

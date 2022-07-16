@@ -2,26 +2,26 @@ import { Injectable } from '@angular/core';
 import * as jwt_decode from 'jwt-decode';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
+  login = localStorage.getItem('token') ? true : false;
 
-  constructor() { }
+  constructor() {}
 
-  getuser(){
+  getuser() {
     const token = localStorage.getItem('token');
-    return jwt_decode(token).user; 
+    return jwt_decode(token).user;
   }
 
-  isloggedin()
-  {
-    if(localStorage.getItem('token'))
-    {
+  isloggedin() {
+    if (localStorage.getItem('token')) {
       return true;
-    }
-    else
-    {
+    } else {
       return false;
     }
+  }
+  setlogin() {
+    this.login = localStorage.getItem('token') ? true : false;
   }
 }

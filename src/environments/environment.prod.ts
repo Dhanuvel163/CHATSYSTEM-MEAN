@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  DATABASE: 'https://chatapp-backend-app.herokuapp.com/',
 };

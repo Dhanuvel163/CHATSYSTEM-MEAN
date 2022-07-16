@@ -1,0 +1,22 @@
+@media only screen and (max-width: 570 px) {
+  .row {
+    margin-top: 130px !important;
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+  }
+}
+
+.mat-primary {
+  background: linear-gradient(
+    112.5deg,
+    rgb(95, 10, 135) 11.4%,
+    rgb(164, 80, 139) 60.2%
+  ) !important;
+  -webkit-box-shadow: 0 10px 6px -6px #000;
+  -moz-box-shadow: 0 10px 6px -6px #000;
+  box-shadow: 0 10px 6px -6px #000;
+}
+
+h1 {
+  outline: none;
+}
