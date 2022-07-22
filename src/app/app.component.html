@@ -1,14 +1,14 @@
 <div class="scrollR">
     <app-header></app-header>
-    <div style="margin-bottom: 40px;">
+    <div [style.marginBottom]="Router.url==='/chat'?'0px':'40px'">
         <router-outlet></router-outlet>
     </div>
-    <div class="footer mt-auto">
+    <div class="footer mt-auto" *ngIf="Router.url!=='/chat'">
         <h3>
             Contact us : dhanuram99@gmail.com
         </h3>
         <h3>
-            Moblie : 7358961528
+            Moblie : 7358961528 
         </h3>
     </div>
 </div>

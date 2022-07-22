@@ -1,22 +1,11 @@
-#chatlist {
-  max-height: 500px;
-  overflow-y: auto;
-}
-
-h2 {
-  font-size: 18px;
-  padding: 15px 20px;
-  background: linear-gradient(
-    to right,
-    rgb(249, 83, 198),
-    rgb(185, 29, 115)
-  ) !important;
+.h2 {
+  background-color: #7d0061;
   color: white;
-  text-transform: uppercase;
+  font-size: 18px;
+  padding: 25px 0px;
+  text-transform: capitalize;
   text-align: center;
   margin: 0px;
-  // border-top-left-radius: 10px;
-  border-top-right-radius: 4px;
 }
 
 @keyframes spin {
@@ -30,16 +19,11 @@ h2 {
 
 #mario-chat {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
 }
 
 #chat-window {
-  height: 400px;
+  height: calc(100vh - 230px);
   overflow-y: auto;
-  background: #fef2dc;
-  // border: 2px solid #000;
-
-  // opacity: 0.8;
 }
 
 #output p {
@@ -59,10 +43,6 @@ h2 {
   margin: 0 20px;
 }
 
-.chat-output {
-  height: 500px;
-}
-
 label {
   box-sizing: border-box;
   display: block;
@@ -71,76 +51,68 @@ label {
 
 input {
   padding: 10px 20px;
-  box-sizing: border-box;
   border: 0;
   display: block;
   width: 100%;
-  background: #fef2dc;
-  border: 2px solid #000;
-  font-family: Nunito;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   font-size: 16px;
+  outline: none !important;
 }
 
 #send {
-  background: linear-gradient(
-    to right,
-    rgb(249, 83, 198),
-    rgb(185, 29, 115)
-  ) !important;
-  color: #fff;
   font-size: 18px;
-  border: 0;
-  padding: 12px 0;
+  padding: 8px 0;
   width: 100%;
-  border-radius: 0px;
-  border-bottom-right-radius: 4px;
+  border-radius: 0px !important;
+  outline: none !important;
   cursor: pointer;
-}
-
-#leave {
-  background: skyblue;
-  color: #fff;
-  font-size: 18px;
-  border: 0;
-  padding: 12px 0;
-  width: 100%;
-  border-radius: 0 0 2px 2px;
+  background-color: #7d0061;
+  color: white;
 }
 
 .userMessage {
+  border: 1px solid #af6f6f26;
+  min-width: 90px;
   width: fit-content;
   max-width: 70%;
   background-color: #98fb98;
-  padding: 15px;
+  padding: 5px 10px;
   border-radius: 5px;
-  margin-top: 1px;
+  margin-top: 3px;
   color: white;
   text-align: right;
   margin-left: auto;
+  margin-right: 3px;
   p {
     margin-bottom: 0px;
+    text-align: left;
   }
-  #ti {
-    font-size: 10px;
+  .ti {
+    font-size: 9px;
     margin-top: 1px;
   }
 }
 
 .secUserMessage {
+  border: 1px solid #af6f6f26;
+  min-width: 90px;
   width: fit-content;
   text-overflow: clip;
   max-width: 70%;
   background-color: #f0f8ff;
-  padding: 15px;
+  padding: 5px 10px;
   border-radius: 5px;
-  margin-top: 1px;
+  margin-top: 3px;
   color: black;
   margin-left: 3px;
   p {
     margin-bottom: 0px;
   }
-  #ti {
-    font-size: 10px;
+  .ti {
+    font-size: 9px;
+    display: block;
+    text-align: right;
     margin-top: 1px;
   }
 }
@@ -152,7 +124,6 @@ input {
 
 .litem {
   cursor: pointer;
-  color: white;
 }
 .litem:hover {
   border-radius: 3px;
@@ -164,7 +135,8 @@ input {
   padding: 10px;
   position: sticky;
   top: 0;
-  // background-color: #7d0061;
+  z-index: 10;
+  background-color: #7d0061;
   opacity: 1;
   h3 {
     margin: 0px;
@@ -172,16 +144,9 @@ input {
 }
 .p-card {
   padding: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
   hr {
     margin: 1px;
   }
-  background: linear-gradient(
-    to right,
-    rgb(249, 83, 198),
-    rgb(185, 29, 115)
-  ) !important;
 }
 .mat-list {
   padding: 10px;
@@ -197,9 +162,9 @@ input {
 }
 
 .cards {
-  padding-top: 1px !important;
-  padding-bottom: 1px !important;
-  animation: scale 2s;
+  padding: 0px !important;
+  animation: scale 1s;
+  border-radius: 0px !important;
 }
 
 @keyframes scale {
@@ -211,18 +176,17 @@ input {
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .col {
-    margin: 8px;
-  }
-  .p-card {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
-  h2 {
-    border-top-left-radius: 4px;
-  }
-  #send {
-    border-bottom-left-radius: 4px;
-  }
+::-webkit-scrollbar {
+  width: 8px;
+  padding: 2px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 8px black !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #49176d;
+  margin: 2px;
+  border-radius: 10px;
 }
