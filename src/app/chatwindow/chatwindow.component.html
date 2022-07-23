@@ -1,7 +1,7 @@
 <div>
   <mat-card class="cards">
-    <div class="d-flex flex-row">
-      <div style="width:30%">
+    <div class="d-block d-md-flex flex-row">
+      <div class="listSection">
         <mat-card style="overflow: auto;height: calc(100vh - 64px);border-radius: 0px !important" class="p-card">
           <div class="header">
             <div class="d-flex justify-content-center">
@@ -33,7 +33,7 @@
         </mat-card>
       </div>
 
-      <div style="width:70%">
+      <div class="chatSection">
         <ng-template [ngIf]="untouched">
           <div id=mariochat>
             <div class="h2">Select the user to start chat!</div>

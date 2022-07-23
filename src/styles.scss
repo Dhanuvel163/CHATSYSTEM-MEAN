@@ -20,3 +20,18 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
+.listSection{
+  width: 30%;
+}
+.chatSection{
+  width: 70%;
+}
+@media screen and (max-width: 900px) {
+  .listSection{
+    width: auto;
+  }
+  .chatSection{
+    width: auto;
+  }
+}
